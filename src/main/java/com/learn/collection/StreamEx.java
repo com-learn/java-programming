@@ -12,6 +12,9 @@ import java.util.stream.Stream;
 public class StreamEx {
 
     public static void main(String[] args) {
+        
+    }
+    public static void groupingBy() {
 
         List<Student> student = new ArrayList<>();
         student.add(Student.builder().name("malu").age(8).city("chennai").subject("english").build());
@@ -22,16 +25,14 @@ public class StreamEx {
 
         // group by attribute name
         Map<String, List<Student>> subjectMap =
-                student.stream()
-                        .collect(Collectors.groupingBy(Student::getSubject));
+                student.stream().collect(Collectors.groupingBy(Student::getSubject));
 
         subjectMap.forEach((key,value)-> System.out.println( " subject  : " + key +" \n students "+ value));
 
         // group by attribute name and down stream collector
         Map<String, List<String>> studentMap =
-                student.stream()
-                        .collect(Collectors.groupingBy(Student::getCity,
-                                Collectors.mapping(Student::getName, Collectors.toList())));
+                student.stream().collect(Collectors.groupingBy(Student::getCity,
+                                 Collectors.mapping(Student::getName, Collectors.toList())));
 
         studentMap.forEach((key,value)-> System.out.println( " city  : " + key +" \n student names "+ value));
 
