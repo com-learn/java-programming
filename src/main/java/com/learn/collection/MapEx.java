@@ -1,8 +1,8 @@
 package com.learn.collection;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class MapEx {
 
@@ -15,14 +15,15 @@ public class MapEx {
 
     public static void main(String[] args) {
 
-        Map<String, String> nameLocationMap = new HashMap<>();
+        Map<String, String> nameLocationMap = new LinkedHashMap<>(); // HashMap<>();
         nameLocationMap.put("messi","argentina");
         nameLocationMap.put("ronaldo", "portugal");
         nameLocationMap.put("mbappe", "france");
         nameLocationMap.put("neymar", "brazil");
 
         nameLocationMap.forEach((key, value) -> System.out.println(key + "=" + value));
-        // basic operations - get, getOrDefault, containsKey, containsValue
+        // basic operations - get, getOrDefault,
+        //                  - containsKey, containsValue
         //                  - put, putIfAbsent
         //                  - remove(key), remove(key,value)
         //                  - size(), isEmpty
