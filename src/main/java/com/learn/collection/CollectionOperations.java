@@ -1,9 +1,6 @@
 package com.learn.collection;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class CollectionOperations {
     public static void main(String[] args) {
@@ -26,6 +23,9 @@ public class CollectionOperations {
 
         Collections.reverse(list);
         System.out.println(" after reversing list "+ list);
+
+        Collections.rotate(list, 2);
+        System.out.println(" after rotating list "+ list);
 
 
     }
