@@ -32,7 +32,7 @@ public class MapEx {
         //                  - clear
         //                  - putAll(newMap)
         //                  - replaceAll((key,currentValue)-> newValue)
-        // view operations - keySet, entrySet, values
+        // view operations  - keySet, entrySet, values
 
     }
 }

@@ -5,14 +5,13 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class ListEx {
     public static void main(String[] args) {
         // a list maintains insertion order
-        List<String> arrayListEx = new ArrayList<>(); // dynamic positional based, faster access
-        List<String> linkedListEx = new LinkedList<>(); // faster insertion and deletion
-        List<String> vectorEx = new Vector<>(); // synchronized list
+        List<String> arrayListEx    = new ArrayList<>();    // dynamic positional based, faster access
+        List<String> linkedListEx   = new LinkedList<>();   // faster insertion and deletion
+        List<String> vectorEx       = new Vector<>();       // synchronized list
 
         List<Cricketer> cricketers = new ArrayList<>();
 
